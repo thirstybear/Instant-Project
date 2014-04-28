@@ -1,0 +1,6 @@
+---
+
+- hosts: jenkins-server
+  sudo: true
+  roles:
+    - jenkins
