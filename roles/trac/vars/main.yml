@@ -1,4 +1,4 @@
 ---
   vars:
     tracHomeDir: /home/trac
-    tracConfigDir: "{{ tracHomeDir }}/trac_config"
+    tracConfigDir: /home/trac/trac_config

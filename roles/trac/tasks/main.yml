@@ -1,11 +1,13 @@
 ---
   - name: Installing Trac
     easy_install: name=trac
+  - name: Creating Trac user
+    user: name=trac
   - name: Creating Trac configuration
-    command: creates={{ tracConfigDir }} trac-admin {{ tracConfigDir }} initenv dbp sqlite:db/trac.db
-  - Changing ownership of Trac config
+    command: trac-admin {{ tracConfigDir }} initenv dbp sqlite:db/trac.db creates={{ tracConfigDir }}
+  - name: Changing ownership of Trac config
     command: chown -R trac {{ tracConfigDir }}
-  - Changing group of Trac config
+  - name: Changing group of Trac config
     command: chgrp -R trac {{ tracConfigDir }}
   - name: Starting Trac wiki on port 80
-    command: tracd --user=trac -d --pidfile={{ tracHomeDir }}/trac.pid -e {{ tracConfigDir }}
+    command: tracd --user=trac -s -d --pidfile={{ tracHomeDir }}/trac.pid -e {{ tracConfigDir }}
