@@ -1,3 +1,5 @@
 ---
-  - apt: package=postgresql
-  - apt: package=postgresql-contrib
+  - name: Installing Postgres
+    apt: package=postgresql
+  - name: Installing Postgres extras
+    apt: package=postgresql-contrib

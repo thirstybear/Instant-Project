@@ -1,4 +1,7 @@
 ---
-  - apt: package=python-setuptools
-  - apt: package=python-dev
-  - apt: package=build-essential
+  - name: Installing Python Setup Tools
+    apt: package=python-setuptools
+  - name: Installing Python dev
+    apt: package=python-dev
+  - name: Installing build essentials
+    apt: package=build-essential
