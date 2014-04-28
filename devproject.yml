@@ -9,5 +9,4 @@
   sudo: true
   roles:
     - python
-    - postgres
     - trac
