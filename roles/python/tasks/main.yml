@@ -1,0 +1,4 @@
+---
+  - apt: package=python-setuptools
+  - apt: package=python-dev
+  - apt: package=build-essential

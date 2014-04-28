@@ -4,3 +4,10 @@
   sudo: true
   roles:
     - jenkins
+
+- hosts: wiki-server
+  sudo: true
+  roles:
+    - python
+    - postgres
+    - trac

@@ -1,0 +1,3 @@
+---
+  - apt: package=postgresql
+  - apt: package=postgresql-contrib
